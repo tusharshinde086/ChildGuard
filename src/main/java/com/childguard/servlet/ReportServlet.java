@@ -3,7 +3,7 @@ package com.childguard.servlet;
 import com.childguard.dao.ReportDAO;
 import com.childguard.model.Report;
 
-import javax.servlet.ServletException;
+import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 
@@ -26,7 +26,6 @@ public class ReportServlet extends HttpServlet {
         report.setStatus("Submitted");
 
         dao.save(report);
-
-        resp.sendRedirect("index.jsp?success=1");
+        resp.sendRedirect("report.jsp?success=1");
     }
 }

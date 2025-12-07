@@ -64,7 +64,7 @@
             MyGov - Child Labour Initiative</a></li>
     </ul>
 
-    <p class="copytext">© 2025 ChildGuard - Protecting Children, Empowering Communities.</p>
+    <p class="copytext">JSPM MCA© 2025 ChildGuard - Protecting Children, Empowering Communities.</p>
 </footer>
 </body>
 </html>

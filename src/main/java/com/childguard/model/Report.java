@@ -1,5 +1,7 @@
 package com.childguard.model;
 
+import java.sql.Timestamp;
+
 public class Report {
 
     private int id;
@@ -7,11 +9,9 @@ public class Report {
     private String location;
     private String description;
     private String status;
-    private String date;   // Stored as String for easy JSP display
+    private Timestamp date;  // Must be Timestamp ✔
 
     public Report() {}
-
-    // ----------- GETTERS & SETTERS -------------
 
     public int getId() {
         return id;
@@ -53,13 +53,11 @@ public class Report {
         this.status = status;
     }
 
-    public String getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
-    // Store date as String for easy formatting in JSP
-    public void setDate(String date) {
+    public void setDate(Timestamp date) {  // ✔ FIXED
         this.date = date;
     }
-
 }

@@ -2,44 +2,25 @@ package com.childguard.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Properties;
-import java.io.InputStream;
 
 public class DBConnection {
 
-    private static Connection connection;
+    private static final String URL = "jdbc:mysql://localhost:3306/childguard?useSSL=false&allowPublicKeyRetrieval=true";
+    private static final String USER = "root";       // your MySQL username
+    private static final String PASS = "root";       // your MySQL password (change if needed)
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 
+    // ALWAYS return a new DB connection
     public static Connection getConnection() {
 
-        if (connection != null) {
-            return connection;
-        }
-
         try {
-            Properties props = new Properties();
-            InputStream in = DBConnection.class.getClassLoader()
-                    .getResourceAsStream("database.properties");
-
-            if (in == null) {
-                throw new RuntimeException("database.properties not found in resources folder");
-            }
-
-            props.load(in);
-
-            String url = props.getProperty("db.url");
-            String username = props.getProperty("db.username");
-            String password = props.getProperty("db.password");
-            String driver = props.getProperty("db.driver");
-
-            Class.forName(driver);  
-            connection = DriverManager.getConnection(url, username, password);
+            Class.forName(DRIVER);  // Load MySQL driver
+            return DriverManager.getConnection(URL, USER, PASS);
 
         } catch (Exception e) {
+            System.out.println("❌ Database Connection Failed!");
             e.printStackTrace();
-            throw new RuntimeException("DB Connection Failed: " + e.getMessage());
+            return null;
         }
-
-        return connection;
     }
 }

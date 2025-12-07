@@ -21,7 +21,7 @@ public class ReportDAO {
     private static final String DELETE_SQL =
             "DELETE FROM reports WHERE id=?";
 
-    // ✔ SAVE REPORT
+    // SAVE REPORT
     public void save(Report report) {
         try (Connection con = DBConnection.getConnection();
              PreparedStatement ps = con.prepareStatement(INSERT_SQL)) {
@@ -38,7 +38,7 @@ public class ReportDAO {
         }
     }
 
-    // ✔ LIST ALL REPORTS
+    // LIST ALL REPORTS
     public List<Report> getAll() {
         List<Report> reports = new ArrayList<>();
 
@@ -53,7 +53,7 @@ public class ReportDAO {
                 r.setLocation(rs.getString("location"));
                 r.setDescription(rs.getString("description"));
                 r.setStatus(rs.getString("status"));
-                r.setTitle(rs.getString("title"));
+                r.setDate(rs.getTimestamp("date"));  // FIXED
 
                 reports.add(r);
             }
@@ -65,7 +65,7 @@ public class ReportDAO {
         return reports;
     }
 
-    // ✔ UPDATE STATUS
+    // UPDATE STATUS
     public void updateStatus(int id, String status) {
         try (Connection con = DBConnection.getConnection();
              PreparedStatement ps = con.prepareStatement(UPDATE_SQL)) {
@@ -79,7 +79,7 @@ public class ReportDAO {
         }
     }
 
-    // ✔ DELETE REPORT
+    // DELETE REPORT
     public void delete(int id) {
         try (Connection con = DBConnection.getConnection();
              PreparedStatement ps = con.prepareStatement(DELETE_SQL)) {

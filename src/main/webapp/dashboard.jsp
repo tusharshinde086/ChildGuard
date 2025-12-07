@@ -1,4 +1,5 @@
-<%@ page import="java.util.*, com.childguard.model.Report" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.childguard.model.Report" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -8,6 +9,7 @@
         return;
     }
 %>
+
 
 <!DOCTYPE html>
 <html>
@@ -96,7 +98,7 @@
 </div>
 <footer class="footer">
   
-    <p class="copytext">© 2025 ChildGuard – Protecting Children, Empowering Communities.</p>
+    <p class="copytext">JSPM 404© 2025 ChildGuard – Protecting Children, Empowering Communities.</p>
 </footer>
 
 </body>

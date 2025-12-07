@@ -29,20 +29,22 @@
     </p>
 </div>
 
-<!-- Footer -->
 <footer class="footer">
     <h3>Support & Reference Links</h3>
+
     <ul class="footer-links">
         <li><a href="https://www.unicef.org/reports" target="_blank">UNICEF Reports</a></li>
         <li><a href="https://labour.gov.in/childlabour" target="_blank">Government Acts & Labour Laws</a></li>
         <li><a href="https://www.savethechildren.in/resource-centre/" target="_blank">NGO Publications</a></li>
         <li><a href="https://www.statista.com/topics/child-labour-india/" target="_blank">Child Labour Data - India</a></li>
+
         <li><a href="https://en.wikipedia.org/wiki/Child_labour_in_India" target="_blank">Wikipedia - Child Labour in India</a></li>
         <li><a href="https://labour.gov.in/hi/childlabour/about-child-labour" target="_blank">Ministry of Labour - Child Labour</a></li>
         <li><a href="https://indiancc.mygov.in/activity/anushreewaghmare/child-labour/" target="_blank">
             MyGov - Child Labour Initiative</a></li>
     </ul>
-    <p class="copytext">JSPM © 2025 ChildGuard - Protecting Children, Empowering Communities.</p>
+
+    <p class="copytext">© 2025 ChildGuard - Protecting Children, Empowering Communities.</p>
 </footer>
 
 </body>
